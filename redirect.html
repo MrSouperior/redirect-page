@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    window.onload = function () {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        window.location.href = "https://wdrb.com";
+      } else if (/iPhone/i.test(userAgent)) {
+        window.location.href = "https://apple.com";
+      } else {
+        // Optional fallback
+        window.location.href = "https://wdrb.com";
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <p>Redirecting based on your device...</p>
+</body>
+</html>
